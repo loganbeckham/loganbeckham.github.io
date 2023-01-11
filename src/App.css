@@ -1,38 +1,303 @@
-.App {
-  text-align: center;
+* {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'PPNeueMontral';
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  background-color: rgb(215, 216, 220);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#container {
+  background-color: rgb(215, 216, 220);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+@font-face {
+  font-family: 'PPNeueMontral';
+  src: url(../public/webfonts/PPNeueMontreal-Book\ copy.otf);
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent; /* make scrollbar transparent */
+}
+
+/* ///////////////////// */
+/* ////// NAVBAR /////// */
+/* ///////////////////// */
+
+#nav-container {
+  width: 90vw;
+  height: 100px;
+  font-size: 1.5em;
+  position: fixed;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#diamond {
+  position: fixed;
+  height: 50px;
+  top: 50px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  list-style: none;
+  margin-top: 61.5px;
+  margin-right: 2vw;
+}
+
+.nav-links li {
+  padding: 0px 20px 0px 20px;
+  letter-spacing: 1px;
+  font-size: .9em;
+}
+
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: red;
+  transform-origin: 0%;
+}
+
+
+/* ///////////////////// */
+/* /////// FRAME /////// */
+/* ///////////////////// */
+
+#scroll-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+
+#frame {
+  border: 1px solid rgb(0, 0, 0);
+  width: 90vw;
+  height: 80%;
+  position: fixed;
+  overflow: auto;
+  
+}
+
+
+/* ///////////////////// */
+/* //////// ONE //////// */
+/* ///////////////////// */
+
+#one {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%
+}
+
+#one-left-side {
+  width: 45%;
+}
+
+#name {
+  position: fixed;
+  font-size: 2.3em;
+  width: 254px;
+  left: 12vw;
+  top: 15vh;
+  display: flex;
+  justify-content: flex-start;
+}
+
+#title{
+  position: fixed;
+  font-size: 1em;
+  text-align: right;
+  width: 254px;
+  left: 12vw;
+  top: 41.5vh;
+  /* padding-top: 10px; */
+  letter-spacing: .1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#one-right-side {
+  width: 55%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-align: right;
 }
 
-.App-link {
-  color: #61dafb;
+#one h1{
+  display: flex;
+  margin-right: 5vw;
+  font-size: 10vw;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
+
+.title-box :hover {
+  cursor: pointer;
+}
+
+#shooting-star {
+  width: 130px;
+  margin-top: -4.5vh;
+}
+
+#dot-star {
+  width: 80px;
+  margin-top: -5.5vh;
+  margin-right: .5vw;
+}
+
+#puffy-star {
+  width: 60px;
+  margin-top: -5vh;
+  margin-right: .5vw;
+}
+
+/* ///////////////////// */
+/* //////// TWO //////// */
+/* ///////////////////// */
+
+#two {
+  display: flex;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%
+}
+
+#image-container {
+  width: 45vw;
+  padding-right: 5vw;
+  padding-bottom: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#image-container img {
+  width: 35vw;
+  height: 375px;
+  border-radius: 150px;
+  object-fit: cover;
+}
+
+#two h1 {
+  height: 5vh;
+  margin-bottom: 40px;
+}
+
+#two p {
+  /* margin-bottom: 40px; */
+}
+
+#bio {
+  width: 44vw;
+  height: 70vh;
+  padding-left: 7vw;
+  padding-right: 5vw;
+  margin-top: 70px;
+  font-size: 1.4em;
+  top: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+#bio div {
+  display: flex;
+  align-items: flex-end;
+}
+
+#btn-div {
+  align-items: flex-start !important;
+  margin-top: 30px;
+  justify-content: flex-end;
+}
+
+#bio button {
+  width: 100px;
+  height: 50px;
+  margin-top: -40px;
+  margin-right: 20px;
+}
+
+@media (max-width: 900px) {
+
+  .the-box {
+    width: 90vw;
+    height: 30vh;
+  }
+
+  #shooting-star {
+    width: 80px;
+    margin-top: -2vh;
+  }
+  
+  #dot-star {
+    width: 50px;
+    margin-top: -2.5vh;
+    margin-right: 1.5vw;
+  }
+  
+  #puffy-star {
+    width: 40px;
+    margin-top: -2.5vh;
+    margin-right: 1.5vw;
+  }
+
+  #one h1{
+    display: flex;
+    margin-right: 5vw;
+    font-size: 75px;
+    align-items: center;
+  }
+
+  
+}
+
+@media (max-width: 875px) {
+
+
+  #one-right-side {
+    height: 50%;
+  }
+
+  #name {
+    top: 40vh;
+  }
+
+  #title {
+    top: 65vh;
+  }
+  
+}
+
+
+
