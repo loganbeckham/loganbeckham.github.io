@@ -57,7 +57,7 @@ function App() {
             <motion.img id="diamond" src={diamond} width={'25px'} initial={{x:'-44vw'}} animate={scrollPos > 300 ? {x:'44vw'} : {x:'-44vw'}} transition={scrollPos > 300 ? {duration: 1} : {delay: .5, duration: 1}}/>
             <motion.p id="name" 
                 initial={{top:'15vh'}} 
-                animate={scrollPos > 300 ? {top:'50px', left: '5vw'} : {y:'21vh', left: '12vw'}} transition={{duration: .7}}>
+                animate={scrollPos > 300 ? {top:'47px', left: '5vw'} : {y:'21vh', left: '12vw'}} transition={{duration: .7}}>
                     Logan Beckham
             </motion.p>
             <motion.p id="title" 
