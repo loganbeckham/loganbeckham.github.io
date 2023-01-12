@@ -327,56 +327,53 @@ span {
 
 #some-projects-heading {
   position: absolute;
-  margin-top: -250px;
+  margin-top: -350px;
+  height: 10px;
+  font-size: 2em;
+}
+
+#click-to-expand {
+  position: absolute;
+  margin-top: 250px;
+  margin-left: 69%;
   height: 10px;
 }
 
 #project-icon-box {
+  width: 90%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
 }
-
-/* #three div {
-  width: 50%;
-  height: 50%;
-} */
-
-/* .card-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgb(0, 0, 0);
-} */
-
-/* .card-template {
-  width: 450px !important;
-  height: 300px !important;
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-} */
 
 .product-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 20px;
-  /* width: 400px !important; */
-  height: 100px !important;
+  flex-wrap: wrap;
+  width: 200px !important;
+  height: 150px !important;
+  border: 1px solid black;
+  border-radius: 20px;
 }
 
 .product-box h1 {
-  font-size: 3em;
+  font-size: 2em;
+  margin-top: 0px;
+  height: 50px;
+}
+
+.product-box :hover {
+  cursor: pointer !important;
 }
 
 .logo-box {
-  width: 100px !important;
-  height: 100px !important;
+  width: 100% !important;
+  height: 70px;
   display: flex;
   justify-content: center;
+  margin-top: 10px;
 }
 
 .logo-box :hover {
@@ -425,7 +422,10 @@ span {
 .project-details-description {
   display: flex;
   justify-content: flex-start;
-  height: 20vh;
+  height: 30%;
+  width: 400px;
+  /* margin-right: 20px; */
+  text-align: center;
 }
 
 .project-details-buttons {
@@ -440,7 +440,7 @@ span {
 }
 
 .project-logo-box {
-  width: 200px;
+  width: 250px;
   height: 100px;
   display: flex;
   flex-wrap: wrap-reverse;
@@ -469,9 +469,11 @@ span {
   height: 50px;
 }
 
-#soundcache-title {
+.project-title {
   /* margin-top: 7px; */
   height: 50px;
+  width: 100%;
+  text-align: center;
 }
 
 

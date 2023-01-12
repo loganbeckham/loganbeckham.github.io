@@ -15,6 +15,9 @@ import {AiFillGift} from "react-icons/ai"
 import myPhoto from "../img/bio_photo.JPG"
 
 import Soundcache from "./soundache"
+import Wshlst from "./wshlst"
+import Traction from "./traction"
+import Unravel from "./unravel"
 
 const Frame = (props) => {
 
@@ -118,116 +121,67 @@ const Frame = (props) => {
                 {props.projectShow == 'Soundcache' ?
                     <Soundcache updateProjectState={props.updateProjectState}/>
                 :
+                props.projectShow == 'Wshlst' ?
+                    <Wshlst updateProjectState={props.updateProjectState}/>
+                :
+                props.projectShow == 'Traction' ?
+                    <Traction updateProjectState={props.updateProjectState}/>
+                :
+                props.projectShow == 'unravel' ?
+                    <Unravel updateProjectState={props.updateProjectState}/>
+                :
                     <>
                     <motion.h4 id="some-projects-heading"
                         initial={{opacity: 0}}
                         whileInView={{opacity: 1}}
                         transition={{duration: 1.5}}>
-                        *some of my projects
+                        some of my projects
+                    </motion.h4>
+                    <motion.h4 id="click-to-expand"
+                        initial={{opacity: 0}}
+                        whileInView={{opacity: 1}}
+                        transition={{duration: 1.5}}>
+                        **click to expand
                     </motion.h4>
                     <motion.div id="project-icon-box"
                         initial={{opacity: 0}}
                         whileInView={{opacity: 1}}
                         transition={{duration: 1.5}}>
-                        <div className="product-box">
-                            <div className="logo-box" onClick={() => props.updateProjectState('Soundcache')}>
-                                <BsFillFileEarmarkMusicFill id="soundcache-icon" size={'6em'}/>
-                            </div>
-                            {/* <h1>SoundCache</h1> */}
-                        </div>
-
-                        <div className="product-box">
-                            <div className="logo-box">
-                                <BiMapPin id="traction-icon" size={'7em'}/>
-                            </div>
-                            {/* <h1>Traction</h1> */}
-                        </div>
-
-                        <div className="product-box">
-                            <div className="logo-box">
-                                <AiFillGift id="wshlst-icon" size={'7em'}/>
-                            </div>
-                            {/* <h1>WSHLST</h1> */}
-                        </div>
-
-                        <div className="product-box">
-                            <div className="logo-box">
-                                <CiWavePulse1 id="instrum-icon" size={'7em'}/>
-                            </div>
-                            {/* <h1>Instrum</h1> */}
-                        </div>
-                    </motion.div>
-                    </>
-                }       
-
-                {/* <div className="card-container">
-                    <div className="card-template">
-                        <div className="product-box"> 
+                        <div className="product-box" onClick={() => props.updateProjectState('Soundcache')}>
                             <div className="logo-box">
                                 <BsFillFileEarmarkMusicFill id="soundcache-icon" size={'3em'}/>
                             </div>
                             <h1>SoundCache</h1>
                         </div>
-                        <div className="stack-box">
-                            <SiHtml5 className="stack-icon" size={'2em'}/>
-                            <SiCss3 className="stack-icon" size={'2em'}/>
-                            <SiReact className="stack-icon" size={'2em'}/>
-                            <SiExpress className="stack-icon" size={'2em'}/>
-                            <SiMongodb className="stack-icon" size={'2em'}/>
-                        </div>
-                    </div>
-                </div>
-                <div className="card-container">
-                    <div className="card-template">
-                        <div className="product-box">
+
+                        <div className="product-box" onClick={() => props.updateProjectState('unravel')}>
                             <div className="logo-box">
-                                <BiMapPin id="traction-icon" size={'3em'}/>
+                                <CiWavePulse1 id="instrum-icon" size={'4em'}/>
                             </div>
-                            <h1>Traction</h1>
+                            <h1>unravel</h1>
                         </div>
-                        <div className="stack-box">
-                            <SiHtml5 className="stack-icon" size={'2em'}/>
-                            <SiCss3 className="stack-icon" size={'2em'}/>
-                            <SiReact className="stack-icon" size={'2em'}/>
-                            <SiExpress className="stack-icon" size={'2em'}/>
-                            <SiMongodb className="stack-icon" size={'2em'}/>
-                        </div>
-                    </div>
-                </div>
-                <div className="card-container">
-                    <div className="card-template">
-                        <div className="product-box">
+
+
+                        <div className="product-box" onClick={() => props.updateProjectState('Wshlst')}>
                             <div className="logo-box">
-                                <AiFillGift id="wshlst-icon" size={'3em'}/>
+                                <AiFillGift id="wshlst-icon" size={'4em'}/>
                             </div>
                             <h1>WSHLST</h1>
                         </div>
-                        <div className="stack-box">
-                            <SiHtml5 className="stack-icon" size={'2em'}/>
-                            <SiCss3 className="stack-icon" size={'2em'}/>
-                            <SiReact className="stack-icon" size={'2em'}/>
-                            <SiDjango className="stack-icon" size={'2em'}/>
-                            <SiPostgresql className="stack-icon" size={'2em'}/>
-                        </div>
-                    </div>
-                </div>
-                <div className="card-container">
-                    <div className="card-template">
-                        <div className="product-box">
+
+                        <div className="product-box" onClick={() => props.updateProjectState('Traction')}>
                             <div className="logo-box">
-                                <CiWavePulse1 id="traction-icon" size={'3em'}/>
+                                <BiMapPin id="traction-icon" size={'4em'}/>
                             </div>
-                            <h1>Instrum</h1>
+                            <h1>Traction</h1>
                         </div>
-                        <div className="stack-box">
-                            <SiHtml5 className="stack-icon" size={'2em'}/>
-                            <SiCss3 className="stack-icon" size={'2em'}/>
-                            <SiReact className="stack-icon" size={'2em'}/>
-                            <SiExpress className="stack-icon" size={'2em'}/>
-                            <SiMongodb className="stack-icon" size={'2em'}/>
-                        </div>
-                    </div>
-                </div> */}
+
+                    </motion.div>
+                    </>
+                }       
+
+                <div class="scroll-area" id="four" ref={props.four}>
+                </div>
                 
             </div>
 

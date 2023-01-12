@@ -18,7 +18,7 @@ const Soundcache = (props) => {
             <div className='project-details'>
                     <div className="project-logo-box">
                         <BsFillFileEarmarkMusicFill className="project-icon" size={'2.5em'}/>
-                        <h1 id='soundcache-title'>SoundCache</h1>
+                        <h1 className='project-title'>SoundCache</h1>
                     </div>
                     <div className='project-details-description'>
                         <p> Soundcache is a web application for discovering royalty free audio samples and sound effects from across the web. With fully functional authentication, users are able to save, organize, and edit audio samples into personalized collections. Service uses Json Web Tokens to create user sessions and utilizes bcrypt for user security. </p>

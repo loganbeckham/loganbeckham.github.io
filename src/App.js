@@ -23,6 +23,7 @@ function App() {
     const one = useRef(null)
     const two = useRef(null)
     const three = useRef(null)
+    const four = useRef(null)
 
     
     const updateProjectState = (project) => {
@@ -80,10 +81,10 @@ function App() {
                     Full Stack Developer
             </motion.p>
 
-            <Navbar scrollY={scrollY} scrollPos={scrollPos} two={two} three={three} updateProjectState={updateProjectState}/>
+            <Navbar scrollY={scrollY} scrollPos={scrollPos} two={two} three={three} four={four} updateProjectState={updateProjectState}/>
 
             <div id='scroll-container'>
-                <Frame frameRef={frameRef} scrollY={scrollY} scrollPos={scrollPos} pageState={pageState} two={two} three={three} updateProjectState={updateProjectState} projectShow={projectShow}/>
+                <Frame frameRef={frameRef} scrollY={scrollY} scrollPos={scrollPos} pageState={pageState} two={two} three={three} four={four} updateProjectState={updateProjectState} projectShow={projectShow}/>
 
             </div>
 
