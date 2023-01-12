@@ -18,6 +18,16 @@ function App() {
     const frameRef = useRef(null)
     const [scrollPos, setScrollPos] = useState()
     const [pageState, setPageState] = useState(0)
+    const [projectShow, setProjectShow] = useState("")
+
+    const one = useRef(null)
+    const two = useRef(null)
+    const three = useRef(null)
+
+    
+    const updateProjectState = (project) => {
+        setProjectShow(project)
+    }
 
     const animation = useAnimationControls()
 
@@ -35,6 +45,10 @@ function App() {
             setPageState(1)
         } else if (scrollPos < 300 && pageState === 1) {
             setPageState(0)
+        } else if (scrollPos > 900 && pageState === 1) {
+            setPageState(2)
+        } else if (scrollPos < 900 && pageState ===2) {
+            setPageState(1)
         }
         console.log(scrollPos)
         console.log(pageState)
@@ -66,10 +80,10 @@ function App() {
                     Full Stack Developer
             </motion.p>
 
-            <Navbar scrollY={scrollY} scrollPos={scrollPos}/>
+            <Navbar scrollY={scrollY} scrollPos={scrollPos} two={two} three={three} updateProjectState={updateProjectState}/>
 
             <div id='scroll-container'>
-                <Frame frameRef={frameRef} scrollY={scrollY} scrollPos={scrollPos}/>
+                <Frame frameRef={frameRef} scrollY={scrollY} scrollPos={scrollPos} pageState={pageState} two={two} three={three} updateProjectState={updateProjectState} projectShow={projectShow}/>
 
             </div>
 
