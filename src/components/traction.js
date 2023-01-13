@@ -33,8 +33,8 @@ const Traction = (props) => {
                             <SiMongodb className="stack-icon" size={'2em'}/>
                         </div>
                     <div className='project-details-buttons'>
-                        <button className="btn btn-outline-dark">Link</button>
-                        <button className="btn btn-outline-dark">Github</button>
+                        <a href="https://traction.herokuapp.com/" target="_blank"><button className="btn btn-outline-dark">Link</button></a>
+                        <a href="https://github.com/loganbeckham?tab=repositories" target="_blank"><button className="btn btn-outline-dark">Github</button></a>
                         <button className="btn btn-outline-dark" onClick={() => props.updateProjectState('')}>Back</button>
                     </div>
 

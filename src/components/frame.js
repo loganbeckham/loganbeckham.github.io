@@ -185,7 +185,11 @@ const Frame = (props) => {
             </div>
 
             <div class="scroll-area" id="four" ref={props.four}>
-                <div className="contact-card">
+                <motion.div className="contact-card"
+                    initial={{opacity: 0}}
+                    whileInView={{opacity: 1}}
+                    transition={{duration: 2}}
+                >
                     <div className="contact-header">
                         <h1>Get in touch!</h1>
                     </div>
@@ -198,7 +202,7 @@ const Frame = (props) => {
                             <h5 onClick={() => {navigator.clipboard.writeText(this.state.textToCopy)}}>loganbeckham1@gmail.com</h5>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
                 
 
