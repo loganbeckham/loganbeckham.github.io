@@ -464,6 +464,10 @@ span {
   margin-top: 0vw;
 }
 
+.project-icon {
+  margin-left: 50px !important;
+}
+
 .project-stack-box {
   justify-content: center;
   height: 50px;
@@ -474,7 +478,7 @@ span {
 /* //// SOUNDCACHE ///// */
 /* ///////////////////// */
 
-#soundcache-vid {
+.product-vid {
   width: 90%;
   margin-right: 0px !important;
 }
@@ -840,6 +844,10 @@ span {
 
 @media (max-width: 400px) {
 
+  #name {
+    width: 100%;
+  }
+
   #one-left-side {
     width: 0px;
   }
@@ -862,33 +870,77 @@ span {
   #bio {
     /* position: fixed; */
     width: 100%;
-    margin-top: 300px;
+    margin-top: 200px;
     margin-right: 0px;
   }
 
+  #bio p {
+    padding-top: 10px !important;
+  }
+
   #btn-div {
-    margin-top: 20px;
+    margin-top: 5px;
+  }
+
+  #mi-languages {
+    margin-top: -20px !important;
   }
 
   #mi-stack {
-    width: 300px;
+    width: 260px;
+    margin-left: 10px;
   }
 
   .vid-container {
     width: 350px;
     height: 250px;
+    margin-left: 10px;
+    display: flex;
+    text-align: center;
   }
 
   .project-logo-box h1{
-    width: 50%;
+    /* width: 20px; */
     padding-top: 24px;
   }
 
-  .project-logo-box {
+  #soundcache-logo-box {
+    width: 100%;
+    margin-top: -390px;
+    position: absolute;
+  }
+
+  #unravel-logo-box {
+    width: 60%;
+    margin-top: -390px;
+    margin-left: -10px;
+    position: absolute;
+  }
+
+  #traction-logo-box {
+    width: 60%;
+    margin-top: -390px;
+    position: absolute;
+  }
+
+  #wshlst-logo-box {
+    width: 70%;
+    margin-top: -390px;
+    position: absolute;
+  }
+
+  /* .project-logo-box {
     position: absolute;
     margin-top: -380px;
-    margin-right: 30px;
-  }
+    width: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+    display: flex;
+    text-align: center;
+  } */
+
+  /* .project-icon {
+    /* width: 40px; */
 
   .project-stack-box {
     margin-left: 5px;
@@ -917,19 +969,47 @@ span {
   }
 
   #image-container {
-    margin-top: -250px;
+    margin-top: -350px;
   }
 
   #some-projects-heading {
     margin-top: -400px;
   }
 
-  #name {
-    display: none;
+  .product-box {
+    height: 20px !important;
+    width: 150px !important;
+  }
+  
+  .product-box h1 {
+    font-size: 1em ;
+  }
+
+  .contact-header h1 {
+    width: 300px;
+    text-align: center
   }
 
   #title {
-    display: none;
+    top: 72vh !important;
+  }
+
+  .product-vid {
+    height: 100px;
+    width: 50%;
+    margin-top: 20px;
+  }
+
+  .project-details {
+    margin-top: 30px;
+  }
+
+  .project-stack-box {
+    margin-top: -250px;
+  }
+
+  .project-details-description {
+    margin-top: 50px;
   }
   
 }

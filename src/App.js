@@ -11,8 +11,7 @@ import diamond from "./img/icons/Asset 8 copy.svg"
 import Navbar from './components/navbar';
 import Frame from './components/frame';
 
-import { useIsMedium } from './Hooks/useMediaQuery'
-import { useIsSmall } from './Hooks/useMediaQuery';
+import { useIsMedium, useIsSmall, useIsIphone } from './Hooks/useMediaQuery'
 
 
 
@@ -30,6 +29,7 @@ function App() {
 
     const isMedium = useIsMedium()
     const isSmall = useIsSmall()
+    const isIphone = useIsIphone()
 
     
     const updateProjectState = (project) => {
@@ -80,6 +80,9 @@ function App() {
             <motion.p id="name" 
                 initial={{top:'15vh'}} 
                 animate={scrollPos > 300 ? 
+                            isIphone ?
+                            {top:'1vh', left: '4.5vw'}
+                            :
                             isSmall ?
                             {top: '92.5vh', left: '4.5vw'}
                             :
@@ -88,6 +91,9 @@ function App() {
                             :
                             {top:'47px', left:'5vw'}
                         : 
+                            isSmall ?
+                            {y: '50vh'}
+                            :
                             isMedium ?
                             {y: '60vh', left: '12vw'}
                             :
@@ -105,7 +111,7 @@ function App() {
             <Navbar scrollY={scrollY} scrollPos={scrollPos} two={two} three={three} four={four} updateProjectState={updateProjectState}/>
 
             <div id='scroll-container'>
-                <Frame frameRef={frameRef} scrollY={scrollY} scrollPos={scrollPos} pageState={pageState} one={one} two={two} three={three} four={four} updateProjectState={updateProjectState} projectShow={projectShow}/>
+                <Frame frameRef={frameRef} scrollY={scrollY} scrollPos={scrollPos} pageState={pageState} one={one} two={two} three={three} four={four} updateProjectState={updateProjectState} projectShow={projectShow} isIphone={isIphone}/>
 
             </div>
 

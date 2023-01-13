@@ -15,15 +15,15 @@ const Traction = (props) => {
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
                 transition={{duration: 1}}>
-                <video src={TractionVid} autoplay="true" loop="true" muted id='soundcache-vid'/>
+                <video src={TractionVid} autoplay="true" loop="true" muted className='product-vid'/>
             </motion.div>
             <div className='project-details'>
-                    <div className="project-logo-box">
+                    <div className="project-logo-box" id="traction-logo-box">
                         <BiMapPin className="project-icon" size={'3em'}/>
                         <h1 className='project-title'>Traction</h1>
                     </div>
                     <div className='project-details-description'>
-                        <p> Traction is an app designed to help users find those sweet local spots when travelling. For this collaborative project, I developed a dynamic search feature for filtering through user submitted posts. Additionally, I contributed to the backend development and designed the responsive layout for the application</p>
+                        <p> Traction is an app designed to help users find those sweet local spots when travelling. For this collaborative project, I developed a dynamic search feature for filtering through user submitted posts. Additionally, I contributed to the backend development and designed the responsive layout for the application.</p>
                     </div>
                         <div className="project-stack-box">
                             <SiHtml5 className="stack-icon" size={'2em'}/>

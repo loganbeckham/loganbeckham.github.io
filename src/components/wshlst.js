@@ -14,10 +14,10 @@ const Wshlst = (props) => {
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
                 transition={{duration: 1}}>
-                <video src={WshlstVid} autoplay="true" loop="true" muted id='soundcache-vid'/>
+                <video src={WshlstVid} autoplay="true" loop="true" muted className='product-vid'/>
             </motion.div>
             <div className='project-details'>
-                    <div className="project-logo-box">
+                    <div className="project-logo-box" id="wshlst-logo-box">
                         <AiFillGift className="project-icon" size={'3em'}/>
                         <h1 className='project-title'>WSHLST</h1>
                     </div>

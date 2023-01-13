@@ -38,15 +38,33 @@ const Frame = (props) => {
                 <div id='one-left-side'>
                 </div>
                 <div id='one-right-side'>
-                    <motion.div className="title-box" whileHover={{opacity: .4, transition: {duration: .7}}} onClick={() => props.two.current.scrollIntoView({behavior: "smooth"})}>
+                    <motion.div className="title-box" 
+                     whileHover=
+                        { props.isIphone ?
+                            {opacity: 1}
+                        :
+                            {opacity: .4, transition: {duration: .7}}
+                        } onClick={() => props.two.current.scrollIntoView({behavior: "smooth"})}>
                         <img src={shootingStar} id="shooting-star"/>
                         <h1>About</h1>
                     </motion.div>
-                    <motion.div className="title-box" whileHover={{opacity: .4, transition: {duration: .7}}} onClick={() => props.three.current.scrollIntoView({behavior: "smooth"})}>
+                    <motion.div className="title-box" 
+                    whileHover=
+                        { props.isIphone ?
+                            {opacity: 1}
+                        :
+                            {opacity: .4, transition: {duration: .7}}
+                        } onClick={() => props.three.current.scrollIntoView({behavior: "smooth"})}>
                         <img src={dotStar} id="dot-star"/>
                         <h1>Projects</h1>
                     </motion.div>
-                    <motion.div className="title-box" whileHover={{opacity: .4, transition: {duration: .7}}} onClick={() => props.four.current.scrollIntoView({behavior: "smooth"})}>
+                    <motion.div className="title-box" 
+                    whileHover=
+                        { props.isIphone ?
+                            {opacity: 1}
+                        :
+                        {opacity: .4, transition: {duration: .7}}
+                        } onClick={() => props.four.current.scrollIntoView({behavior: "smooth"})}>
                         <img src={puffyStar} id="puffy-star"/>
                         <h1>Contact</h1>
                     </motion.div>
@@ -122,16 +140,16 @@ const Frame = (props) => {
             <div class="scroll-area" id="three" ref={props.three}>
 
                 {props.projectShow == 'Soundcache' ?
-                    <Soundcache updateProjectState={props.updateProjectState}/>
+                    <Soundcache updateProjectState={props.updateProjectState} isIphone={props.isIphone}/>
                 :
                 props.projectShow == 'Wshlst' ?
-                    <Wshlst updateProjectState={props.updateProjectState}/>
+                    <Wshlst updateProjectState={props.updateProjectState} isIphone={props.isIphone}/>
                 :
                 props.projectShow == 'Traction' ?
-                    <Traction updateProjectState={props.updateProjectState}/>
+                    <Traction updateProjectState={props.updateProjectState} isIphone={props.isIphone}/>
                 :
                 props.projectShow == 'unravel' ?
-                    <Unravel updateProjectState={props.updateProjectState}/>
+                    <Unravel updateProjectState={props.updateProjectState} isIphone={props.isIphone}/>
                 :
                     <>
                     <motion.h4 id="some-projects-heading"

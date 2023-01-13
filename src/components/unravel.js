@@ -14,10 +14,10 @@ const Unravel = (props) => {
                 initial={{opacity: 0}}
                 whileInView={{opacity: 1}}
                 transition={{duration: 1}}>
-                <video src={SteveReichVid} autoplay="true" loop="true" muted id='soundcache-vid'/>
+                <video src={SteveReichVid} autoplay="true" loop="true" muted className='product-vid'/>
             </motion.div>
             <div className='project-details'>
-                    <div className="project-logo-box">
+                    <div className="project-logo-box" id="unravel-logo-box">
                         <CiWavePulse1 className="project-icon" size={'2.5em'}/>
                         <h1 className='project-title'>unravel</h1>
                     </div>
