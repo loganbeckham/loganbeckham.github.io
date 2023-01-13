@@ -30,7 +30,11 @@ const Frame = (props) => {
     }, [props.scrollPos])
 
     return (
-        <div ref={props.frameRef} id='frame'>
+        <motion.div ref={props.frameRef} id='frame'
+        initial={{opacity: 0}} 
+        animate={{opacity:1}} 
+        transition={{delay: 1.3, duration: 1}}
+        >
 
             <motion.div className="progress-bar" style={{ scaleX: props.scrollY }}/>
 
@@ -224,7 +228,7 @@ const Frame = (props) => {
             </div>
                 
 
-        </div>
+        </motion.div>
     )
 }
 

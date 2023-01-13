@@ -99,12 +99,12 @@ function App() {
                             :
                             {y:'21vh', left: '12vw'}
                         } 
-                        transition={{duration: .7}}>
+                        transition={{duration: 1}}>
                     Logan Beckham
             </motion.p>
             <motion.p id="title" 
                 initial={{opacity: 0}} 
-                animate={scrollPos > 300 ? {opacity: 0} : {opacity:1}} transition={{duration: .75}}>
+                animate={scrollPos > 300 ? {opacity: 0} : {opacity:1}} transition={{delay: .5, duration: .75}}>
                     Full Stack Developer
             </motion.p>
 
