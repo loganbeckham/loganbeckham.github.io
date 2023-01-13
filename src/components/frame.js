@@ -6,7 +6,7 @@ import shootingStar from "../img/icons/Asset 1 copy.svg"
 import dotStar from "../img/icons/Asset 2 copy.svg"
 import puffyStar from "../img/icons/Asset 9 copy.svg"
 
-import {BsFillFileEarmarkMusicFill, BsFillBootstrapFill} from "react-icons/bs"
+import {BsFillFileEarmarkMusicFill, BsFillBootstrapFill, BsLinkedin, BsGithub,BsArrowUpRight} from "react-icons/bs"
 import {SiJavascript, SiCss3, SiReact, SiMongodb, SiHtml5, SiExpress, SiDjango, SiPostgresql, SiMaterialui, SiPython} from "react-icons/si"
 import {BiMapPin} from "react-icons/bi"
 import {CiWavePulse1} from "react-icons/ci"
@@ -46,7 +46,7 @@ const Frame = (props) => {
                         <img src={dotStar} id="dot-star"/>
                         <h1>Projects</h1>
                     </motion.div>
-                    <motion.div className="title-box" whileHover={{opacity: .4, transition: {duration: .7}}}>
+                    <motion.div className="title-box" whileHover={{opacity: .4, transition: {duration: .7}}} onClick={() => props.four.current.scrollIntoView({behavior: "smooth"})}>
                         <img src={puffyStar} id="puffy-star"/>
                         <h1>Contact</h1>
                     </motion.div>
@@ -182,11 +182,25 @@ const Frame = (props) => {
                     </motion.div>
                     </>
                 }       
-
-                <div class="scroll-area" id="four" ref={props.four}>
-                </div>
-                
             </div>
+
+            <div class="scroll-area" id="four" ref={props.four}>
+                <div className="contact-card">
+                    <div className="contact-header">
+                        <h1>Get in touch!</h1>
+                    </div>
+                    <div className="contact-online">
+                            <a href="https://github.com/loganbeckham" target="_blank"><BsGithub size={'4em'}/></a>
+                            <a href="https://www.linkedin.com/in/loganbeckham/" target="_blank"><BsLinkedin size={'4em'}/></a>
+                    </div>
+                    <div className="contact-info">
+                        <div className="contact-personal">
+                            <h5 onClick={() => {navigator.clipboard.writeText(this.state.textToCopy)}}>loganbeckham1@gmail.com</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
 
         </div>
     )

@@ -10,11 +10,12 @@ const Navbar = (props) => {
 
     return (
         <nav id="nav-container">
+            <h1 id="mobile-name">Logan Beckham</h1>
            
             <motion.ul className="nav-links" initial={{opacity: 0}} animate={props.scrollPos > 300 ? {opacity: 1} : {opacity: 0}} transition={props.scrollPos > 300 ? {delay: 1, duration: 1} : {duration: .5}}>
                 <li id="about" onClick={() => props.two.current.scrollIntoView({behavior: "smooth"})}>About</li>
                 <li id="projects" onClick={() => projectsNavButton()}>Projects</li>
-                <li id="contact">Contact</li>
+                <li id="contact" onClick={() => props.four.current.scrollIntoView({behavior: "smooth"})}>Contact</li>
             </motion.ul>
         </nav>
     )

@@ -105,7 +105,7 @@ function App() {
             <Navbar scrollY={scrollY} scrollPos={scrollPos} two={two} three={three} four={four} updateProjectState={updateProjectState}/>
 
             <div id='scroll-container'>
-                <Frame frameRef={frameRef} scrollY={scrollY} scrollPos={scrollPos} pageState={pageState} two={two} three={three} four={four} updateProjectState={updateProjectState} projectShow={projectShow}/>
+                <Frame frameRef={frameRef} scrollY={scrollY} scrollPos={scrollPos} pageState={pageState} one={one} two={two} three={three} four={four} updateProjectState={updateProjectState} projectShow={projectShow}/>
 
             </div>
 
