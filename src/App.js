@@ -91,7 +91,7 @@ function App() {
                             :
                             {top:'47px', left:'5vw'}
                         : 
-                            isSmall ?
+                            isIphone ?
                             {y: '50vh'}
                             :
                             isMedium ?
