@@ -13,6 +13,7 @@ import {CiWavePulse1} from "react-icons/ci"
 import {AiFillGift} from "react-icons/ai"
 
 import myPhoto from "../img/bio_photo.JPG"
+import Resume from "../img/Logan-Beckham-Resume-Jan-2023.pdf"
 
 import Soundcache from "./soundache"
 import Wshlst from "./wshlst"
@@ -69,11 +70,13 @@ const Frame = (props) => {
                         </motion.p>
                     </div>
                     <div id="btn-div">
-                        <motion.button className="btn btn-outline-dark"
+                        <motion.a href={Resume} target="_blank"
                         initial={{opacity: 0}} 
                         whileInView={{opacity: 1}} transition={{delay: 1, duration: 1}}>
+                            <button className="btn btn-outline-dark">
                             Resumé
-                        </motion.button>
+                            </button>
+                        </motion.a>
                     </div>
                     <div id="language-stack">
                         <div id="mi-languages">

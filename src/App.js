@@ -11,6 +11,9 @@ import diamond from "./img/icons/Asset 8 copy.svg"
 import Navbar from './components/navbar';
 import Frame from './components/frame';
 
+import { useIsMedium } from './Hooks/useMediaQuery'
+import { useIsSmall } from './Hooks/useMediaQuery';
+
 
 
 function App() {
@@ -24,6 +27,9 @@ function App() {
     const two = useRef(null)
     const three = useRef(null)
     const four = useRef(null)
+
+    const isMedium = useIsMedium()
+    const isSmall = useIsSmall()
 
     
     const updateProjectState = (project) => {
@@ -53,6 +59,7 @@ function App() {
         }
         console.log(scrollPos)
         console.log(pageState)
+        console.log(isSmall)
     })
 
     
@@ -72,7 +79,21 @@ function App() {
             <motion.img id="diamond" src={diamond} width={'25px'} initial={{x:'-44vw'}} animate={scrollPos > 300 ? {x:'44vw'} : {x:'-44vw'}} transition={scrollPos > 300 ? {duration: 1} : {delay: .5, duration: 1}}/>
             <motion.p id="name" 
                 initial={{top:'15vh'}} 
-                animate={scrollPos > 300 ? {top:'47px', left: '5vw'} : {y:'21vh', left: '12vw'}} transition={{duration: .7}}>
+                animate={scrollPos > 300 ? 
+                            isSmall ?
+                            {top: '92.5vh', left: '4.5vw'}
+                            :
+                            isMedium ?
+                            {top:'42px', left: '4.5vw'} 
+                            :
+                            {top:'47px', left:'5vw'}
+                        : 
+                            isMedium ?
+                            {y: '60vh', left: '12vw'}
+                            :
+                            {y:'21vh', left: '12vw'}
+                        } 
+                        transition={{duration: .7}}>
                     Logan Beckham
             </motion.p>
             <motion.p id="title" 
