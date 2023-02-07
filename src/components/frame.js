@@ -13,7 +13,7 @@ import {CiWavePulse1} from "react-icons/ci"
 import {AiFillGift} from "react-icons/ai"
 
 import myPhoto from "../img/bio_photo.JPG"
-import Resume from "../img/Logan-Beckham-Resume-Jan-2023.pdf"
+import Resume from "../img/LoganBeckham_Resume_2023.pdf"
 
 import Soundcache from "./soundache"
 import Wshlst from "./wshlst"
