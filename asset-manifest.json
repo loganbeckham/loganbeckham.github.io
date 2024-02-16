@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.275bd813.css",
-    "main.js": "/static/js/main.e219b393.js",
+    "main.js": "/static/js/main.0ef7eece.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/soundcachedemo.mov": "/static/media/soundcachedemo.b092454e8146c68dfed2.mov",
     "static/media/tractiondemo.mov": "/static/media/tractiondemo.f5ad612e796ae135696d.mov",
@@ -9,18 +9,18 @@
     "static/media/unravel_example.mov": "/static/media/unravel_example.997664b016aa779583c0.mov",
     "static/media/bio_photo.JPG": "/static/media/bio_photo.cc59bbc44fb4d1eb3f5b.JPG",
     "static/media/PPNeueMontreal-Book copy.otf": "/static/media/PPNeueMontreal-Book copy.497a4d8a79ae3d85403f.otf",
-    "static/media/LoganBeckhamResume_2023.pdf": "/static/media/LoganBeckhamResume_2023.0003d80c6e4c5b94bab4.pdf",
+    "static/media/LoganBeckham_Resume_2024.pdf": "/static/media/LoganBeckham_Resume_2024.cbc4ae655667e2db3bf9.pdf",
     "static/media/Asset 1 copy.svg": "/static/media/Asset 1 copy.1690a06e7a585eed2e82477256beb916.svg",
     "index.html": "/index.html",
     "static/media/Asset 9 copy.svg": "/static/media/Asset 9 copy.e48e3b5ba1538ea398036359558b407f.svg",
     "static/media/Asset 2 copy.svg": "/static/media/Asset 2 copy.8eeb6f7deeaa9153dad88c45e670f542.svg",
     "static/media/Asset 8 copy.svg": "/static/media/Asset 8 copy.d5fd5dc6708e459f32441d29a0cc240e.svg",
     "main.275bd813.css.map": "/static/css/main.275bd813.css.map",
-    "main.e219b393.js.map": "/static/js/main.e219b393.js.map",
+    "main.0ef7eece.js.map": "/static/js/main.0ef7eece.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.275bd813.css",
-    "static/js/main.e219b393.js"
+    "static/js/main.0ef7eece.js"
   ]
 }
